@@ -24,7 +24,7 @@ typedef  struct materias{
 	string nome;
 	int creditos;
 	int dificuldade;
-	list<materias> t_materias;
+	list<materias> lista_materias;
 
 
 }t_materia;
