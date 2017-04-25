@@ -12,6 +12,7 @@ Versão do compilador: gcc(GCC) 4.8.1
 Descricao:	Projeto2 = 
 */
 
+#include <sstream> 
 
 #include <iostream>
 #include <string>
@@ -21,12 +22,12 @@ Descricao:	Projeto2 =
 using namespace std;
 
 typedef  struct materias{
-	int *codigo;
+	int codigo;
 	string nome;
-	int *creditos;
-	int *dificuldade;
+	int creditos;
+	int dificuldade;
 	string adjacentes;
-	list<materias> lista_materias;
+	list<int> lista_materias;
 
 
 }t_materia;
@@ -34,23 +35,31 @@ typedef  struct materias{
 t_materia materia[50];
 
 void CriarGrafo(){
-	string line; 
-
+	string	line;
 	ifstream fp("materias.txt");
-	if(fp.is_open()){	/*verifica se existe o arquivo, se ele realmente foi aberto*/
-		while(!fp.eof()){
-			getline(fp, line);
-			cout << line << endl;
+	int i=0, j;
+	int valor, quantidade_materias_loop;
+	while(!fp.eof()){
+		getline(fp, line);
+		stringstream is(line);
+		is >> materia[i].codigo >> materia[i].nome >> materia[i].creditos >> materia[i].dificuldade >> quantidade_materias_loop;
+		cout << materia[i].codigo << " " << materia[i].nome << " " << materia[i].creditos  << endl;
+		j=0;
+		while(j != quantidade_materias_loop ){
+			is >> valor;
+			materia[i].lista_materias.push_back(valor);
 			getchar();
-			scanf(%[^|])
-			cin >>	
+			j++;
 		}
+		/*for(auto v : materia[i].lista_materias){
+			
+		}*/
+
+		i++;
+		getchar();
 	}
-	else{
-		cout << "Nao existe arquivo" << endl;
-	}
-	fp.close();
 }
+
 
 int main(){
 
