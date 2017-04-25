@@ -1,37 +1,35 @@
-/*Cod    materia	creditos	dificuldade		requesitos*/ 
-
-113034  | 	CALCULO1 									|	6	|		|	-		 
-113468	|	INTRODUCAO AOS SISTEMAS COMPUTACIONAIS		|	4	|		|	-		
-113450	|	FUNDAMENTOS TEORICOS DA COMPUTACAO			|	4	|		|	-	
-113476	|	ALGORITMOS E PROGRAMACAO DE COMPUTADORES	|	6	|		|	-
-116726	|	INFORMATICA E SOCIEDADE						|	2	|		|	-
-116351	|	CIRCUITOS DIGITAIS							|	6	|		|	-
-116319	|	ESTRUTURAS DE DADOS							|	4	|		|	-	
-113042	|	CALCULO 2									|	6	|		|	-
-113093	|	INTRODUCAO A ALGEBRA LINEAR					|	4	|		|	-	
-116394	|	ORGANIZACAO E ARQUITETURA DE COMPUTADORES	|	4	|		|	-		
-117889	|	TECNICAS DE PROGRAMACAO 1					|	4	|		|	-	
-113107	|	ALGEBRA 1									|	4	|		|	-	
-113417	|	CALCULO NUMERICO							|	4	|		|	-
-115045	|	PROBABILIDADE E ESTATISTICA					|	6	|		|	-
-117366	| 	LOGICA COMPUTACIONAL 1						|	4	|		|	-
-117897	|	TECNICAS DE PROGRAMACAO 2					|	4	|		|	-
-116327	|	ORGANIZACAO DE ARQUIVOS						|	4	|		|	-
-117901	|	TEORIA E APLICACAO DE GRAFOS				|	4	|		|	-	
-116572	|	REDES DE COMPUTADORES						|	4	|		|	-
-116343	| 	LINGUAGEM DE PROGRAMACAO					|	4	|		|	-
-117935	|	PROGRAMACAO CONCORRENTE						|	4	|		|	-	
-116441	|	ENGENHARIA DE SOFTWARE						|	4	|		|	-	
-116378	|	BANCOS DE DADOS								|	4	|		|	-	
-116653	|	INTRODUCAO A INTELIGENCIA ARTIFICIAL		|	4	|		|	-
-116432	|	SOFTWARE BASICO								|	4	|		|	-
-117960	|	FUNDAMENTOS DE SISTEMAS OPERACIONAIS		|	4	|		|	-
-116882	|	AUTOMATOS E COMPUTABILIDADE					|	6	|		|	-	
-116416	|	SISTEMAS DE INFORMACAO						|	4	|		|	-
-117943	|	COMPUTACAO EXPERIMENTAL						|	4	|		|	-
-117536	|	PROJETO DE ANALISE DE ALGORITIMOS			|	4	|		|	-		
-117951	|	COMPILADORES								|	4	|		|	-
-117927	|	SEGURANCA COMPUTACIONAL						|	4	|		|	-
-117919	|	METODOLOGIA CIENTIFICA						|	2	|		|	-
-116912	|	TRABALHO DE GRADUACAO 1						|	2	|		|	-	
-116921	|	TRABALHO DE GRADUACAO 2						|	4	|		|	-
+113034  	Calculo1 										6		1	2	113042	115045
+113468		IntroducaoAosSistemasComputacionais				4		1	0			
+113450		FundamentosTeoricosDaCcomputacao				4		1	0		
+113476		AlgoritmoEProgramacaoDeComputadores				6		1	1	116319	
+116726		InformaticaESociedade							2		1	0	
+116351		CircuitosDigitais								6		1	1	116394
+116319		EstruturasDeDados								4		1	4	117889	116327	117901	116572
+113042		Calculo2										6		1	2	113417	116572	
+113093		IntroducaoAAlgebraLinear						4		1	0		
+116394		OrganizacaoEArquiteturaDeComputadores			4		1	0			
+117889		TecnicasDeProgramacao1							4		1	1	117897	
+113107		Algebra1										4		1	0		
+113417		CalculoNumerico									4		1	0	
+115045		ProbabilidadeEEstatistica						6		1	2	116327	116572
+117366	 	LogicaComputacional1							4		1		
+117897		TecnicasDeProgramacao2							4		1		
+116327		OrganizacaoDeArquivos							4		1		
+117901		TeoriaEAplicacaoDeGrafos						4		1			
+116572		RedesDeComputadores								4		1		
+116343	 	LinguagemDeProgramacao							4		1		
+117935		ProgramacaoConcorrente							4		1			
+116441		EngenhariaDeSoftware							4		1			
+116378		BancosDeDados									4		1			
+116653		IntroducaoAInteligenciaArtificial				4		1		
+116432		SoftwareBasico									4		1		
+117960		FundamentosDeSistemasOperacionais				4		1		
+116882		AutomatosEComputablidade						6		1			
+116416		SistemasDeInformacao							4		1		
+117943		ComputacaoExperimental							4		1		
+117536		ProjetoDeAnaliseDeAlgoritmo						4		1				
+117951		Compiladores									4		1		
+117927		SegurancaComputacional							4		1		
+117919		MetodologiaCientifica							2		1		
+116912		TrabalhoDeGraduacao1							2		1			
+116921		TrabalhoDeGraduacao2							4		1		
