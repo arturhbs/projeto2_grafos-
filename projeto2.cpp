@@ -51,10 +51,11 @@ void CriarGrafo(){
 			getchar();
 			j++;
 		}
-		/*for(auto v : materia[i].lista_materias){
-			
-		}*/
 
+		for (list<int>::iterator it=materia[i].lista_materias.begin(); it != materia[i].lista_materias.end(); ++it){
+		  cout << ' ' << *it;
+		}
+		cout << "\n" ;
 		i++;
 		getchar();
 	}
