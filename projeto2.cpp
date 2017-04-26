@@ -26,7 +26,7 @@ typedef  struct materias{
 	string nome;
 	int creditos;
 	int dificuldade;
-	string adjacentes;
+	int quantidade_materias_loop;
 	list<int> lista_materias;
 
 
@@ -38,33 +38,46 @@ void CriarGrafo(){
 	string	line;
 	ifstream fp("materias.txt");
 	int i=0, j;
-	int valor, quantidade_materias_loop;
+	int valor;
 	while(!fp.eof()){
-		getline(fp, line);
-		stringstream is(line);
-		is >> materia[i].codigo >> materia[i].nome >> materia[i].creditos >> materia[i].dificuldade >> quantidade_materias_loop;
-		cout << materia[i].codigo << " " << materia[i].nome << " " << materia[i].creditos  << endl;
+		getline(fp, line);/*pega uma linha inteira do .txt*/
+		stringstream is(line);/* 'is' passa a ser um tipo de leitura para a string no arquivo*/
+		is >> materia[i].codigo >> materia[i].nome >> materia[i].creditos >> materia[i].dificuldade >> materia[i].quantidade_materias_loop;/*faz leitura de cada termo no .txt*/
+
 		j=0;
-		while(j != quantidade_materias_loop ){
+		while(j != materia[i].quantidade_materias_loop ){ /* colocar o valor das materias que estão direcionadas em uma lista */
 			is >> valor;
-			materia[i].lista_materias.push_back(valor);
-			getchar();
+			materia[i].lista_materias.push_back(valor);/*coloca no final da lista*/
 			j++;
 		}
 
-		for (list<int>::iterator it=materia[i].lista_materias.begin(); it != materia[i].lista_materias.end(); ++it){
-		  cout << ' ' << *it;
-		}
-		cout << "\n" ;
+		
 		i++;
+	}
+}
+
+void PegarGrauZero(){
+	list<int> grauzero;
+	int codigo_materia, i;
+
+	for(i=0; i<35; i++ ){
+
+		if(materia[i].quantidade_materias_loop == 0){ /*gravar os vertices que contem grau zero*/
+			codigo_materia = materia[i].codigo;
+			grauzero.push_back(codigo_materia);
+		} 
+	}
+	for (list<int>::iterator it=grauzero.begin(); it != grauzero.end(); ++it){/* printar lista de cada um*/
+	 	cout << ' ' << *it;
 		getchar();
 	}
+
 }
 
 
 int main(){
-
-	CriarGrafo();	
+	CriarGrafo();
+	PegarGrauZero();
 
 
 	return 0; 	
