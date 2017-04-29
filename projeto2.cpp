@@ -57,8 +57,9 @@ void CriarGrafo(){
 }
 
 void PegarGrauZero(){
-	list<int> grauzero;
+	list<int> grauzero;	/*lista para gravar a ordem topologica utilizando Khan*/
 	int codigo_materia, i, j;
+	
 
 	for(i=0; i<35; i++ ){
 
@@ -67,22 +68,25 @@ void PegarGrauZero(){
 			grauzero.push_back(codigo_materia);
 			for(j=0;j<35; j ++){
 				if(materia[j].quantidade_materias_loop != 0){ /*verificar apenas as materias que o grau é diferente de zero*/
-					for (list<int>::iterator it1=grauzero.begin(); it1 != grauzero.end(); ++it1){/* pesquisar na lista de cada um se há a materia como pre-requisito*/
+					for (list<int>::iterator it1=materia[j].lista_materias.begin(); it1 != materia[j].lista_materias.end(); ++it1){/* pesquisar na lista de cada um se há a materia como pre-requisito*/
 					 	if(*it1 == codigo_materia){
-					 		cout << "entrou" << endl; 	
-					 		getchar();
-					 		materia[j].lista_materias.erase(it1);/* apaga da lista a materia*/
 					 		materia[j].quantidade_materias_loop = materia[j].quantidade_materias_loop -1;/*diminui o contador da materia*/	
-					 		cout << "entrou" << endl; 	
 					 		
 					 	}
 					}
 				}	
 			}
 		} 
+
 	}
 	for (list<int>::iterator it=grauzero.begin(); it != grauzero.end(); ++it){/* printar lista de cada um*/
 	 	cout << ' ' << *it << ' ';
+	 	for(i=0;i<35; i++){
+	 		if(materia[i].codigo == *it){
+	 			cout << "Materia = "<<materia[i].nome << " i == "<< i<< endl;
+	 			break;
+	 		}
+	 	}
 		getchar();
 	}
 
