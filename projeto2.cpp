@@ -67,19 +67,19 @@ void PegarGrauZero(){
 			codigo_materia = materia[i].codigo;
 			grauzero.push_back(codigo_materia);
 			
-					 /*	for(int k=0;k<35; k++){	 TESTE MEU PARA VER OQ ESTÁ PRINTANDO
+					 	for(int k=0;k<35; k++){
 					 		if(materia[k].codigo == codigo_materia){
-					 			cout << "Materia = "<<materia[k].nome << endl;
+					 			cout << "\n\nMateria PRINCIAPAl = "<<materia[k].nome << endl;
 					 			break;
 					 		}
 					 	}
-					 	getchar();*/
+					 	getchar();
 			for(j=0;j<35; j ++){
 				if(materia[j].quantidade_materias_loop != 0){ /*verificar apenas as materias que o grau é diferente de zero*/
 					for (list<int>::iterator it1=materia[j].lista_materias.begin(); it1 != materia[j].lista_materias.end(); ++it1){/* pesquisar na lista de cada um se há a materia como pre-requisito*/
 					 	if(*it1 == codigo_materia){
 					 		materia[j].quantidade_materias_loop = materia[j].quantidade_materias_loop -1;/*diminui o contador da materia*/	
-					 		cout << "materia = " << materia[j].nome<< endl;
+					 		cout << "materia RETIRADA = " << materia[j].nome<< endl;
 					 	}	
 					}
 				}	
