@@ -4,7 +4,7 @@
 113476		AlgoritmoEProgramacaoDeComputadores				6		1	0		
 116726		InformaticaESociedade							2		1	0	
 116351		CircuitosDigitais								6		1	0	
-116319		EstruturasDeDados								4		1	0	
+116319		EstruturasDeDados								4		1	1	113476
 113042		Calculo2										6		1	1	113034	
 113093		IntroducaoAAlgebraLinear						4		1	0		
 116394		OrganizacaoEArquiteturaDeComputadores			4		1	1	116351	
@@ -28,8 +28,8 @@
 116416		SistemasDeInformacao							4		1	1	116319
 117943		ComputacaoExperimental							4		1	2	116319	115045	
 117536		ProjetoDeAnaliseDeAlgoritmo						4		1	2	113034	116319			
-117951		Compiladores									4		1	3	116343	116432	116882
 117927		SegurancaComputacional							4		1	1	116572
-117919		MetodologiaCientifica							2		1	1	116921	
+117951		Compiladores									4		1	3	116343	116432	116882
 116912		TrabalhoDeGraduacao1							2		1	0		
 116921		TrabalhoDeGraduacao2							4		1	1	116912	
+117919		MetodologiaCientifica							2		1	1	116921	
