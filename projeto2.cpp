@@ -5,7 +5,7 @@ Departamento de Ciencia da Computacao
 Teroria e aplicação de grafos - 01/2017
 
 Alunos(a): Artur Henrique Brandao de Souza	- 15/0118783 
-		   Marcos Paulo Batalha Bispo - 15O154208
+		   Marcos Paulo Batalha Bispo - 15/O154208
 							
 Versão do compilador: gcc(GCC) 4.8.1
 
@@ -81,13 +81,13 @@ void PegarGrauZero(){
 	while(i !=35 ){
 		ja_existe = false;
 		if(materia[i].quantidade_materias_loop == 0){ /*gravar os vertices que contem grau zero na lista 'grauzero' */
-			for(list<int>::iterator it= grauzero.begin(); it!= grauzero.end(); it++){
-				if(materia[i].codigo == *it){
-					ja_existe = true;
+			for(list<int>::iterator it= grauzero.begin(); it!= grauzero.end(); it++){/*percorre a lista grauzero */
+				if(materia[i].codigo == *it){/*verifica se a materia testada ja esta no arquivo*/
+					ja_existe = true;/*se ja estiver no arquivo, ela marca que já está*/
 					break;
 				}
 			}
-			if(ja_existe == false){
+			if(ja_existe == false){ /*caso a materia não esteja na lista como verificado antes, entra para ser colocado na lista*/
 
 				codigo_materia = materia[i].codigo;
 				grauzero.push_back(codigo_materia);/*coloca o codigo da materia no final da lista*/ 
@@ -130,7 +130,7 @@ void PrintarGrafo(){
 }
 
 void PrintarOrdemTopologica(){
-int j=1;	
+	int j=1;	
 	for(list<int>::iterator it= grauzero.begin(); it!= grauzero.end(); it++){
 		cout << *it ;
 		for(int i=0;i<35;i++){
@@ -156,7 +156,7 @@ int main(){
 	cin >> escolha;
 
 	switch(escolha){
-		case 1 :	PrintarGrafo();
+		case 1 :  PrintarGrafo();
 		break;
 		case 2 :  PrintarOrdemTopologica();
 		break;		
