@@ -9,7 +9,7 @@ Alunos(a): Artur Henrique Brandao de Souza	- 15/0118783
 							
 Versão do compilador: gcc(GCC) 4.8.1
 
-Descricao:	Projeto2 = Criaar um grafo valorado com as matérias do curso , fazendo uma ordenação topoçógica e o caminho crítico do mesmo.
+Descricao:	Projeto2 = Criar um grafo valorado com as matérias do curso , fazendo uma ordenação topoçógica e o caminho crítico do mesmo.
 */
 
 #include <sstream> 
@@ -73,32 +73,44 @@ void CriarGrafo(){
 
 }
 
-void PegarGrauZero(){
 	list<int> grauzero;	/*lista para gravar a ordem topologica utilizando Khan*/
-	int codigo_materia, i, j;
-	
+void PegarGrauZero(){
+	int codigo_materia, i=0, j;
+	bool ja_existe;
 
-	for(i=0; i<35; i++ ){
-
+	while(i !=35 ){
+		ja_existe = false;
 		if(materia[i].quantidade_materias_loop == 0){ /*gravar os vertices que contem grau zero na lista 'grauzero' */
-			codigo_materia = materia[i].codigo;
-			grauzero.push_back(codigo_materia);
+			for(list<int>::iterator it= grauzero.begin(); it!= grauzero.end(); it++){
+				if(materia[i].codigo == *it){
+					ja_existe = true;
+					break;
+				}
+			}
+			if(ja_existe == false){
 
-			for(j=0;j<35; j ++){
-				if(materia[j].quantidade_materias_loop != 0){ /*verificar apenas as materias que o grau é diferente de zero*/
-					for (list<int>::iterator it1=materia[j].lista_materias.begin(); it1 != materia[j].lista_materias.end(); ++it1){/* pesquisar na lista de cada um se há a materia como pre-requisito*/
-					 	if(*it1 == codigo_materia){
-					 		materia[j].quantidade_materias_loop = materia[j].quantidade_materias_loop -1;/*diminui o contador da materia*/	
-					 	}	
-					}
-				}	
+				codigo_materia = materia[i].codigo;
+				grauzero.push_back(codigo_materia);/*coloca o codigo da materia no final da lista*/ 
+				i=-1;/*ao ele colocar um novo elemento na lista grauzero , ele voltara nas materias e verificara se tem alguma materia que ficou para trás, caso o arquivo texto ja nao esteja em uma ordem topológica previamente*/
+
+				for(j=0;j<35; j ++){
+					if(materia[j].quantidade_materias_loop != 0){ /*verificar apenas as materias que o grau é diferente de zero*/
+						for (list<int>::iterator it1=materia[j].lista_materias.begin(); it1 != materia[j].lista_materias.end(); ++it1){/* pesquisar na lista de cada um se há a materia como pre-requisito*/
+						 	if(*it1 == codigo_materia){
+						 		materia[j].quantidade_materias_loop = materia[j].quantidade_materias_loop -1;/*diminui o contador da materia*/	
+						 	}	
+						}
+					}	
+				}
 			}
 		} 
+		i++;
 	}
 }
 
 void PrintarGrafo(){
-int i;
+
+	int i;
 	for(i=0;i<35;i++){
 		cout <<"Codigo  = " <<materia[i].codigo ;
 		if(!materia[i].lista_materias.empty()){		/* verifica se a lista de materias está vazia, ja que se estiver a de valor de aresta tambem estara*/
@@ -117,11 +129,41 @@ int i;
 	}
 }
 
+void PrintarOrdemTopologica(){
+int j=1;	
+	for(list<int>::iterator it= grauzero.begin(); it!= grauzero.end(); it++){
+		cout << *it ;
+		for(int i=0;i<35;i++){
+			if(*it == materia[i].codigo){
+				cout << " == " << materia[i].nome<<endl; ;
+				break;
+			}
+		}
+		j++;
+	}
+	cout << " j == " << j << endl;	
+}
+
 
 int main(){
+	int escolha;
+
 	CriarGrafo();
-	PrintarGrafo();
 	PegarGrauZero();
+
+	cout << "Escolha a opcao que deseja : \n 1- Printar grafo \n 2- Printar grafo em ordem topológica\n ";
+
+	cin >> escolha;
+
+	switch(escolha){
+		case 1 :	PrintarGrafo();
+		break;
+		case 2 :  PrintarOrdemTopologica();
+		break;		
+		
+	}	
+
+
 
 
 	return 0; 	
