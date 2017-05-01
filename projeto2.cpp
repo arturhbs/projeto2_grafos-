@@ -97,9 +97,30 @@ void PegarGrauZero(){
 	}
 }
 
+void PrintarGrafo(){
+int i;
+	for(i=0;i<35;i++){
+		cout <<"Codigo  = " <<materia[i].codigo ;
+		if(!materia[i].lista_materias.empty()){		/* verifica se a lista de materias está vazia, ja que se estiver a de valor de aresta tambem estara*/
+			cout << " Pre-requisito(s) = ";		
+			list<int>::iterator it;
+			list<int>::iterator it_aux;
+			it = materia[i].lista_materias.begin();	/*pegar o primeiro elemento da lista de materias*/
+			it_aux = materia[i].lista_valorAresta.begin(); /*pegar o primeiro elemento da lista dos valores das arestas*/
+			while(it != materia[i].lista_materias.end()){
+				cout << " <-- " << *it_aux << " -- " << *it; 
+				it++;
+				it_aux++;
+			}
+		}
+		cout << "\n";
+	}
+}
+
 
 int main(){
 	CriarGrafo();
+	PrintarGrafo();
 	PegarGrauZero();
 
 
