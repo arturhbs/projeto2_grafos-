@@ -44,7 +44,7 @@
 113115		TeoriaDosNumeros1								4		1   0
 117587  	InteracaoHumanoComputador						4		1	1	117889
 113131		Algebra2										4		1	1	113107
-140481		LeituraEProduçãoDeTextos	                    4		0.5	0
+140481		LeituraEProducaoDeTextos	                    4		0.5	0
 134465		IntroducaoASociologia							4		0.5	0
 117242		IntroducaoAoProcDeImagens						4		1   2	113093	113476
 150649  	LinguaDeSinaisBrasileiraBasico					4		0.5	0
