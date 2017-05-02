@@ -1,7 +1,5 @@
-113034  	Calculo1 										6		1	0	
 113468		IntroducaoAosSistemasComputacionais				4		1	0			
 113450		FundamentosTeoricosDaCcomputacao				4		1	0		
-113476		AlgoritmoEProgramacaoDeComputadores				6		1	0		
 116726		InformaticaESociedade							2		0.5	0	
 116351		CircuitosDigitais								6		1	0	
 116319		EstruturasDeDados								4		1	1	113476
@@ -16,6 +14,8 @@
 117897		TecnicasDeProgramacao2							4		1	1	117889
 116327		OrganizacaoDeArquivos							4		1	2	116319	115045
 117901		TeoriaEAplicacaoDeGrafos						4		1	1	116319	
+113034  	Calculo1 										6		1	0	
+113476		AlgoritmoEProgramacaoDeComputadores				6		1	0	
 116572		RedesDeComputadores								4		1	3	116319	113042	115045
 116343	 	LinguagemDeProgramacao							4		1.5	1	116319
 117935		ProgramacaoConcorrente							4		1	2	117897	116394
@@ -32,15 +32,21 @@
 117951		Compiladores									4		1.5	3	116343	116432	116882
 116912		TrabalhoDeGraduacao1							2		1.5	0		
 116921		TrabalhoDeGraduacao2							4		1.5	1	116912	
-117919		MetodologiaCientifica							2		1	1	116921	
-113051  	Calculo3										6       1.5 1   113042 
+117919		MetodologiaCientifica							2		1	1	116921	 
+113123		AlgebraLinear									6		1	1	113034
 118001  	Fisica1											4       1   0
 118028  	Fisica2											4       1   2   118001	113034
 118044		Fisica3											4       1.5 2   118028	113042
-118061		Fisica4											4		1.5 2	118044	113042
+170054 		IntroducaoAAtividadeEmpresarial					4		1   0
 116491  	IntroducaoAComputacaoSonica						4		1   2	113034	116319
 145971		InglesInstrumental1								4		0.5	0
 142573		InglesInstrumental2								4		0.5	1	145971
 113115		TeoriaDosNumeros1								4		1   0
 117587  	InteracaoHumanoComputador						4		1	1	117889
 113131		Algebra2										4		1	1	113107
+140481		LeituraEProduçãoDeTextos	                    4		0.5	0
+134465		IntroducaoASociologia							4		0.5	0
+117242		IntroducaoAoProcDeImagens						4		1   2	113093	113476
+150649  	LinguaDeSinaisBrasileiraBasico					4		0.5	0
+199290 		IntroducaoAosEstudosDoFuturoNoBrasil			4		0.5	0
+116297  	TopicosAvancadosEmComputadores					4		1 	0
